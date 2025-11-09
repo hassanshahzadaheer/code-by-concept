@@ -1,5 +1,9 @@
 package expenses_tracker;
 
+import javax.sound.midi.Soundbank;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class ExpenseManager {
@@ -43,28 +47,36 @@ public class ExpenseManager {
     void addExpense() {
         try {
 
-            System.out.print("Description: ");
-            String desc = sc.nextLine();
+            System.out.print("What you bought? : ");
+            String description = sc.nextLine();
 
-            System.out.print("Category (Food, Travel, Bills, Shopping): ");
-            String cat = sc.nextLine();
+            System.out.print("Amount: $");
+            String userAmount = sc.nextLine();
 
-            System.out.print("Amount: ");
-            double amount = Double.parseDouble(sc.nextLine());
+            Double amount = Double.parseDouble(userAmount);
 
-            System.out.print("Date (yyyy-mm-dd): ");
-            String datStr = sc.nextLine();
 
-            Date date = new GregorianCalendar(
-                    Integer.parseInt(datStr.substring(0, 4)),
-                    Integer.parseInt(datStr.substring(5, 7)) - 1,
-                    Integer.parseInt(datStr.substring(8, 10))
-            ).getTime();
+            System.out.print("Enter date (dd-MM-yyyy): ");
+            String userDate = sc.nextLine();
+            DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+            LocalDate date = LocalDate.parse(userDate,format);
 
-            currentUser.expenses.add(new Expense(cat,amount,date,desc));
+            System.out.print("Category: (Food, Shopping, Travel) ");
+            String category = sc.nextLine();
 
-            System.out.println("Expense added!");
+            if (description.isEmpty()) {
+                System.out.println("Please enter product description");
+            } else if (userAmount.isEmpty()) {
+                System.out.println("Please enter amount");
+            } else if (amount < 0 ) {
+                System.out.println("Amount must be positive");
+            } else if (userDate.isEmpty()) {
+                System.out.println("Please enter date");
+            } else if (category.isEmpty()) {
+                System.out.println(" please enter category");
+            } else currentUser.expenses.add(new Expense(category, amount, date, description));
 
+            System.out.println("Expenses added!");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -84,6 +96,31 @@ public class ExpenseManager {
 
     }
 
+    void removeExpense() {
+        viewExpenses();
+        System.out.print("Enter expense number to remove: ");
+        try {
+            int idx = Integer.parseInt(sc.nextLine()) - 1;
+            currentUser.expenses.remove(idx);
+            System.out.println("Expense removed!");
+        } catch (Exception e) {
+            System.out.println("Invalid input.");
+        }
+    }
+
+
+    void expenseReport() {
+        Map<String, Double> categoryTotals = new HashMap<>();
+        double total = 0;
+        for (Expense e : currentUser.expenses) {
+            total += e.amount;
+            categoryTotals.put(e.category, categoryTotals.getOrDefault(e.category, 0.0) + e.amount);
+        }
+        System.out.println("Total: Rs." + total);
+        for (String cat : categoryTotals.keySet()) {
+            System.out.println(String.format("  %-10s Rs.%.2f", cat, categoryTotals.get(cat)));
+        }
+    }
 
     void mainMenu() {
         while (true) {
@@ -101,9 +138,9 @@ public class ExpenseManager {
             else if (choice.equals("2"))
                viewExpenses();
             else if (choice.equals("3"))
-                System.out.println("remove expenses");
+                removeExpense();
             else if (choice.equals("4"))
-                System.out.println("expense report");
+              expenseReport();
             else if (choice.equals("0")) {
                 currentUser = null;
                 break;

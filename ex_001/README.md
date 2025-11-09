@@ -1,4 +1,4 @@
-# Code by Concept - Java Learning Examples
+# Code by Concept 
 
 This repository contains practical Java examples covering fundamental Object-Oriented Programming concepts and design patterns.
 
@@ -133,15 +133,30 @@ java method_overload.SmartMessageCenter
 java user_management.UserManager
 ```
 
+## 📈 Learning Progress
 
-## 🤝 Contributing
+### Current Focus:
+Arrays & Collections (Nov 10-18, 2025)
 
-Feel free to add more examples or improve existing ones!
+### Completed Topics:
+✅ Variables & Data Types  
+✅ Control Flow (if-else, loops)  
+⏳ Arrays (in progress)  
+⬜ ArrayList  
+⬜ HashMap  
+⬜ Exception Handling
 
-## 📝 License
+### Projects Built:
+1. **Simple Expense Tracker** - Arrays only
+2. **Expense Tracker v2** - With ArrayList
+3. [In Progress] **Expense Analytics** - With HashMap
 
-Open for educational purposes.
+### Skills I Can Confidently Use:
+- Create and manipulate arrays
+- Loop through collections
+- Basic input validation
+- File I/O operations
 
----
+[See detailed learning log](LEARNING_LOG.md)
 
 **Note**: This is a learning repository focused on understanding Java OOP concepts through practical examples.
