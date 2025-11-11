@@ -1,4 +1,40 @@
 
+
+
+## Day 12 - Array Search & String Comparison - 11 Nov 2025
+
+**Time:** 1.5 hour
+
+**Status:** ✅ Complete
+
+### What I Built:
+
+* Solved 3 mini challenges using arrays and loops.
+* Used **parallel arrays** to track categories and expenses.
+* Compared strings using `.equals()` (not `==`).
+* Handled “not found” cases using **boolean flags**.
+* Used **break statements** to stop loops early.
+* Found the **second highest expense** logically (without sorting).
+
+
+### Key Learning:
+
+* String comparison (`.equals()` vs `==`)
+* Handling “not found” cases
+* Using flags (`boolean` variables)
+* `break` statement to exit loops early
+
+### Struggled With:
+
+* Remembering when to use `.equals()` vs `==` for strings.
+* Tracking both **highest** and **second highest** without sorting.
+
+### Fixed By:
+
+* Learned `.equals()` compares **values**, while `==` compares **memory references**.
+* Used two variables (`highest`, `secondHighest`) and simple conditions to keep them updated.
+
+
 ---
 
 ## Day 11 - Arrays Basics (Expense Tracker) - 10 Nov 2025
