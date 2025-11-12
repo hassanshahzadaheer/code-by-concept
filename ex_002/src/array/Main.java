@@ -1,9 +1,5 @@
 package array;
 
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
-
 public class Main {
     public static void main (String[] args) {
 //
@@ -60,7 +56,7 @@ public class Main {
 //        double average = total / expenses.length;
 //        System.out.println("Average: $" +average);
 //
-//        int[] nums =  {5, 5, 5, 5};
+//        int[] nums =  {99, 1235, 533, 15};
 //
 //        int highest = Integer.MIN_VALUE;
 //        int secondHighest = Integer.MIN_VALUE;;
@@ -115,18 +111,16 @@ public class Main {
 //        System.out.println(userInput + " found at " + position + "position");
 
 
-//        // Bug 1
 //        String name = "Ali";
-//        if (name.equals("Ali")) {  // What's wrong?
+//        if (name.equals("Ali")) {
 //            System.out.println("Found!");
 //        }
 //
-//// Bug 2
-//        int[] nums = {10, 20, 30};
+//        int[] numss = {10, 20, 30};
 //        int position = 0;
 //        boolean found = false;
-//        for (int i = 0; i < nums.length; i++) {
-//            if (nums[i] == 20) {
+//        for (int i = 0; i < numss.length; i++) {
+//            if (numss[i] == 20) {
 //                position = i;
 //                found = true;
 //            }
@@ -136,13 +130,7 @@ public class Main {
 //        } else {
 //            System.out.println("Not Found");
 //        }
-//
 
-        int[] nums = {1, 2, 2, 3, 4, 4, 5};
-        Set<Integer> s = new HashSet<>();
-        for (int n : nums) {
-            if (!s.add(n)) System.out.print(n + " ");
-        }
 
 
     }

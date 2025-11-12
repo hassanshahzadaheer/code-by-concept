@@ -1,6 +1,43 @@
 
 
+## Day 13 - Arrays with Objects - 12 Nov 2025
+**Time:** 1 hour  
+**Status:** ✅ Complete
 
+### What I Built:
+- Expense class with fields, constructor, and methods
+- Array of 5 Expense objects
+- Filter expenses by category
+- Calculate category totals
+- Find most expensive expense
+- User search by category
+
+### Key Takeaway:
+Objects in arrays are WAY more powerful than separate parallel arrays! Instead of managing multiple arrays, everything is bundled together.
+
+### Working Code:
+```java
+Expense[] expenses = new Expense[5];
+expenses[0] = new Expense(50.0, "Food", "Lunch");
+
+// Filter by category
+for (int i = 0; i < expenses.length; i++) {
+    if (expenses[i].getCategory().equals("Food")) {
+        expenses[i].displayExpense();
+    }
+}
+```
+
+### Struggled With:
+- At first forgot to initialize objects (NullPointerException)
+- Remembered: Creating array doesn't create objects, must do `new Expense(...)` for each
+
+### What Clicked:
+- Objects bundle related data together
+- Much cleaner than having separate arrays for amount, category, description
+- Using getters to access private fields
+
+---
 ## Day 12 - Array Search & String Comparison - 11 Nov 2025
 
 **Time:** 1.5 hour
