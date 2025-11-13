@@ -24,6 +24,10 @@ Built a working application from scratch with user interaction.
 - contains() prevents duplicates
 - Enhanced for loop is cleaner for searching
 
+### Solution:
+- [Solution Code](https://github.com/hassanshahzadaheer/code-by-concept/tree/main/ex_002/src/P001_TaskManager)
+
+
 ---
 ## Day 13 - Arrays with Objects - 12 Nov 2025
 **Time:** 1 hour  
