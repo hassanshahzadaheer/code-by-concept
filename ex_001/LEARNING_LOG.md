@@ -1,5 +1,30 @@
+## Day 14  - ArrayList - 13 Nov 2025
+**Time:** 3 hour  
+**Status:** I progress
 
+### What I Built:
+Complete Task Manager with menu system
+- Add, view, complete, search tasks
+- Duplicate prevention
+- Case-insensitive search
+- Input validation
 
+### ArrayList Methods Mastered:
+add(), get(), size(), remove(), contains(), isEmpty()
+
+### Key Takeaway:
+These 6 methods cover 80% of ArrayList usage. I don't need to memorize every method.
+
+### Biggest Win:
+Built a working application from scratch with user interaction.
+
+### What Clicked:
+- debugging to see why not target the correct element to remove
+- Always check isEmpty() before operations
+- contains() prevents duplicates
+- Enhanced for loop is cleaner for searching
+
+---
 ## Day 13 - Arrays with Objects - 12 Nov 2025
 **Time:** 1 hour  
 **Status:** ✅ Complete
