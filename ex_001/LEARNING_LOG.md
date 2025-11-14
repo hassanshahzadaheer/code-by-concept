@@ -1,3 +1,59 @@
+
+
+
+## Day 15 - ArrayList Practice (Attendance System) - 14 Nov 2025
+**Time:** 1 hour  
+**Status:** ✅ 90% Complete
+
+### What I Built:
+Student Attendance System with:
+- Add students to roster
+- Mark present/absent
+- View present/absent/all students
+- Attendance report with percentage
+
+### What I Practiced:
+- Working with 3 ArrayLists simultaneously
+- Moving data between lists
+- Input validation
+- Edge case handling
+- Calculations with list data
+
+### Working Code:
+```java
+// Mark present and remove from absent
+if (present.contains(name)) {
+    System.out.println("Already marked present!");
+} else {
+    present.add(name);
+    absent.remove(name);  // Sync lists
+    System.out.println(name + " marked present!");
+}
+
+// Attendance calculation
+double attendanceRate = ((double) presentCount / total) * 100;
+```
+
+### Bugs I Fixed:
+- Used instance variable instead of local (confused scope)
+- Removed from absent list at wrong time
+- Success message printed even on failure
+- Forgot to handle empty lists
+
+### What Clicked:
+- Instance variables persist between method calls (can cause bugs!)
+- Local variables are safer for temporary data
+- Always check isEmpty() before looping
+- Cast to double for accurate percentage
+
+### Confidence Check:
+- Can work with multiple ArrayLists: ✅
+- Can move data between lists: ✅
+- Can handle edge cases: ⚠️ (learning)
+- Can perform calculations: ✅
+
+---
+
 ## Day 14  - ArrayList - 13 Nov 2025
 **Time:** 3 hour  
 **Status:** I progress
