@@ -102,7 +102,24 @@ public class AttendanceSystem {
     }
 
     public void calculateAttendance() {
-        // Your code here
+        if (allStudents.isEmpty()) {
+            System.out.println("No students in roster!");
+            return;
+        }
+
+        int total = allStudents.size();
+        int presentCount = present.size();
+        int absentCount = absent.size();
+        int notMarked = total - presentCount - absentCount;
+
+        double attendanceRate = ((double) presentCount / total) * 100;
+
+        System.out.println("\n========= Attendance Report =========");
+        System.out.println("Total Students: " + total);
+        System.out.println("Present: " + presentCount);
+        System.out.println("Absent: " + absentCount);
+        System.out.println("Not Marked: " + notMarked);
+        System.out.printf("Attendance Rate: %.2f%%\n", attendanceRate);
     }
 
     public void mainMenu() {
@@ -123,22 +140,30 @@ public class AttendanceSystem {
             switch (choice) {
                 case "1":
                     addStudent();
-                    viewAllStudents();
                     break;
                 case "2":
                     markPresent();
-                    viewPresent();
-                    viewAllStudents();
                     break;
                 case "3":
                     markAbsent();
+                    break;
+                case "4":
+                    viewPresent();
+                    break;
+                case "5":
                     viewAbsent();
+                    break;
+                case "6":
                     viewAllStudents();
                     break;
-                default:
-                    System.out.println("Invalid input");
+                case "7":
+                    calculateAttendance();
                     break;
-
+                case "8":
+                    System.out.println("Goodbye!");
+                    return;
+                default:
+                    System.out.println("Invalid choice!");
             }
         }
     }
