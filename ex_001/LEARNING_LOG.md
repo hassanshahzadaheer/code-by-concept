@@ -1,9 +1,41 @@
 
 
+## Day 16 - HashMap Mastery - 15 Nov 2025
+**Time:** 3 hours (3 sessions)
+
+**Status:** ✅ Complete
+
+### What I Built:
+1. Word Frequency Counter
+2. Phone Book System
+3. Student Grade Analytics (grouping by subject)
+
+### HashMap Methods Mastered:
+put(), get(), containsKey(), remove(), keySet(), values()
+
+### Key Concepts:
+- HashMap for instant lookup (no loops needed!)
+- Grouping data: HashMap <String, ArrayList<Object>>
+- Counting frequency: HashMap<String, Integer>
+- Key-value relationships
+ 
+
+### Struggled With:
+- At first, confused about HashMap<String, ArrayList<>>
+- looping to objects.
+- how keyset work individually.
+- Realized: Key points to a VALUE (which can be any object!)
+
+### What Clicked:
+- HashMap = Dictionary (key → value)
+- Use when you need fast lookup by key
+- Perfect for grouping, counting, and organizing data
+- ArrayList = ordered list, HashMap = organized pairs
+---
 
 ## Day 15 - ArrayList Practice (Attendance System) - 14 Nov 2025
 **Time:** 1 hour  
-**Status:** ✅ 90% Complete
+**Status:** ✅ Complete
 
 ### What I Built:
 Student Attendance System with:
