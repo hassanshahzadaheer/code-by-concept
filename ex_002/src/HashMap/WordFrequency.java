@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class WordFrequency {
     public static void main(String[] args) {
-        String input = "hello world hello java world";
+        String input = "Java is an oop programming language. Java is an amazing";
         String[] words = input.split(" ");
 
         HashMap<String, Integer> wordCount = new HashMap<>();
