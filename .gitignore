@@ -1,0 +1,24 @@
+# IntelliJ IDEA
+*.iml
+.idea/
+out/
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Data files (optional - uncomment if you want to ignore)
+# *.txt
+# *.csv
+
